@@ -16,13 +16,20 @@ export default class SearchBar extends Component {
 	// define input change function
 	onInputChange(event) {
 		console.log(event.target.value);
+		// if you have have a call back to 'this', it needs to be binded as above
 		this.setState({ term: event.target.value });
+	}
+
+	// function will tell app that weather data needs to be fetched
+	onFormSubmit(event) {
+		event.preventDefault();
+
 	}
 
 	render() {
 		return (
 			// created search bar and button with bootstrap classes
-			<form className="input-group">
+			<form onSubmit={this.onFormSubmit} className="input-group">
 				<input 
 					placeholder="Get a five-day forecast in your favorite cities"
 					className="form-control"
