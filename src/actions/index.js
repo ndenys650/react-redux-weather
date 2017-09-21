@@ -12,8 +12,11 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 export function fetchWeather(city) {
 	// 'url' ajax calls for only cities in the US
 	const url = `${ROOT_URL}&q=${city},us`;
-	// creator sends a request through backend api here
+	// creator sends a request through backend api here, 
+	// 'request' is a 'promise' utilized by the middleware
 	const request = axios.get(url);
+
+	console.log('Request:', request);
 
 	return {
 		type: FETCH_WEATHER,

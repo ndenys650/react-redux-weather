@@ -52,12 +52,12 @@ class SearchBar extends Component {
 }
 
 // hookup fetchweather action to searchbar container
-
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ fetchWeather }, dispatch);
 
 }
 
+// exported action of hooking api request to SearchBar through 'connect'
 export default connect(null, mapDispatchToProps)(SearchBar);
 
 
