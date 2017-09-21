@@ -1,10 +1,11 @@
-// import axios to make ajax calls
+// import axios to make ajax request
 import axios from 'axios';
 
 const API_KEY = 'a82e8c446ab4b3831681e26a66184193';
 // concatenate api url with key
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
+// FETCHWEATHER is made to be used as a single dynamic term across the app
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 // set up fetchweather action creator 
