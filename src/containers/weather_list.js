@@ -16,15 +16,9 @@ class WeatherList extends Component {
 			// bringing in chart component with data we want to use and color, height and iwdth were preset in chart.js
 			<tr key={name}>
 				<td>{name}</td>
-				<td>
-					<Chart data={temps} color="orange" /* refactored out chart component to be its own functional component */ /> 
-				</td>
-				<td>
-					<Chart data={pressures} color="green" /* refactored out chart component to be its own functional component */ /> 
-				</td>
-				<td>
-					<Chart data={humidities} color="black" /* refactored out chart component to be its own functional component */ /> 
-				</td>
+				<td><Chart data={temps} color="orange" units="K" /* refactored out chart component to be its own functional component */ /></td>
+				<td><Chart data={pressures} color="green" units="hPa" /* refactored out chart component to be its own functional component */ /></td>
+				<td><Chart data={humidities} color="black" units="%" /* refactored out chart component to be its own functional component */ /></td>
 			</tr>
 		);
 	}
@@ -36,9 +30,9 @@ class WeatherList extends Component {
 				<thead>
 					<tr>
 						<th>City</th>
-						<th>Temperature</th>
-						<th>Pressure</th>
-						<th>Humidity</th>
+						<th>Temperature (K)</th>
+						<th>Pressure (hPa)</th>
+						<th>Humidity (%)</th>
 					</tr>
 				</thead>
 				<tbody>
